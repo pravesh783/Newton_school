@@ -1,0 +1,36 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// Function to print all the
+// even numbers from 0 to x
+void Even(int L,int R)
+{
+
+	// Base case
+	if (R < L) {
+		return;
+	}
+
+	// Recurrence relation
+	R % 2 == 0 ? Even(L, R - 2)
+			: Even(L, R - 1);
+
+	// Check if R is even
+	if (R % 2 == 0) {
+		cout << R << " ";
+	}
+}
+
+
+
+int main()
+{
+int x;
+int y=0;
+cout<<"Enter the value of x"<<endl;
+cin>>x;
+// Print all the even numbers
+	Even(y,x);
+	cout << endl;
+}
